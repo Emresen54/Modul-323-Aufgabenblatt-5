@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalorien Zähler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex flex-col justify-between">
+
+    <header class="p-4">
+        <div class="flex flex-col w-8/12 mx-auto">
+            <h1 class="text-xl font-bold">🔥 Modul 323 - Calories Counter</h1>
+            <div class="border-b border-gray-300 my-2"></div>
+        </div>
+    </header>
+
+    <main class="flex-grow p-4">
+        <div class="w-full flex justify-center mb-4">
+            <div class="flex flex-col w-8/12 space-y-6">
+                <div class="flex space-x-4">
+                    <input type="text" id="meal-name" placeholder="Enter meal name..." class="flex-1 p-4 text-lg border border-gray-300 rounded">
+                    <input type="number" id="meal-calories" placeholder="Enter calories number..." class="flex-1 p-4 text-lg border border-gray-300 rounded">
+                </div>
+                <div class="flex space-x-4">
+                    <button id="save-btn" class="flex-1 bg-green-500 text-white p-4 rounded hover:bg-green-600">Save</button>
+                    <button id="cancel-btn" class="flex-1 bg-red-500 text-white p-4 rounded hover:bg-red-600">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div class="w-full flex justify-center">
+            <table class="w-8/12 text-left border-collapse">
+                <thead>
+                    <tr>
+                        <th class="border-b p-2 text-left">Meal</th>
+                        <th class="border-b p-2 text-left">Calories</th>
+                        <th class="border-b p-2 text-left">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Dynamically added rows -->
+                </tbody>
+                <tfoot>
+                    <tr class="font-bold">
+                        <td class="p-2">Total</td>
+                        <td id="total-calories" class="p-2">0</td>
+                        <td class="p-2"></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </main>
+
+    <footer class="p-4 text-center">
+        <p>Let's track your calories 🍔</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
